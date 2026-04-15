@@ -1,0 +1,172 @@
+/* ============================================
+   AMSTRON — BOM Page Styles
+   ============================================ */
+
+.bom-section { background: var(--color-bg); }
+
+.bom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(var(--space-10), 5vw, var(--space-20));
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .bom-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── INFO SIDE ─── */
+.bom-info h2 {
+  font-size: var(--text-xl);
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+.bom-info > p {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+}
+
+/* ─── STEPS ─── */
+.bom-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-bottom: var(--space-10);
+  position: relative;
+  padding-left: var(--space-8);
+}
+.bom-steps::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.bom-step {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+}
+.bom-step__num {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: var(--text-sm);
+  font-weight: 800;
+  font-family: var(--font-display);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: -42px;
+  position: relative;
+  z-index: 1;
+}
+.bom-step__content strong {
+  display: block;
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+.bom-step__content p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+  max-width: none;
+}
+
+/* ─── BENEFITS ─── */
+.bom-benefits h3 {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  padding-block: var(--space-2);
+  border-bottom: 1px solid var(--color-divider);
+}
+.benefit-item:last-child { border-bottom: none; }
+.benefit-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-cta-light);
+  color: var(--color-cta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ─── FORM CARD ─── */
+.bom-form-wrap { position: sticky; top: calc(var(--space-20) + 1rem); }
+.bom-form-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: clamp(var(--space-8), 4vw, var(--space-10));
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.bom-form-card h3 {
+  font-size: var(--text-lg);
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-text);
+}
+.bom-form-sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: calc(var(--space-2) * -1);
+}
+.bom-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ─── FILE UPLOAD ─── */
+.file-upload-area {
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  transition: border-color var(--transition), background var(--transition);
+}
+.file-upload-area:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+.file-upload-label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+.file-upload-hint {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+}

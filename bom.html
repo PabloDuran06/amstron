@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500,400&f[]=satoshi@700,500,400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <title>BOM Placas Electrónicas — Amstron</title>
+  <meta name="description" content="Envíanos tu BOM (Bill of Materials) y te ofrecemos el mejor precio en dos semanas. Servicio de Cost Down para placas electrónicas." />
+  
+  
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/bom.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Inicio</a>
+          <span>›</span>
+          <span>BOM Placas Electrónicas</span>
+        </nav>
+        <p class="page-hero__eyebrow">Cost Down</p>
+        <h1 class="page-hero__title">BOM Placas Electrónicas</h1>
+        <p class="page-hero__sub">Rellena el formulario y en dos semanas — máximo — contactaremos contigo con nuestra mejor oferta, con la confianza de que os ayudaremos a mejorar vuestros costes.</p>
+      </div>
+    </div>
+
+    <section class="section bom-section">
+      <div class="container">
+        <div class="bom-grid">
+
+          <!-- LEFT: info -->
+          <div class="bom-info reveal">
+            <h2>¿Cómo funciona?</h2>
+            <p>El servicio de Cost Down de Amstron te permite optimizar los costes de los componentes de tus placas electrónicas. En solo 3 pasos:</p>
+            <div class="bom-steps">
+              <div class="bom-step">
+                <div class="bom-step__num">1</div>
+                <div class="bom-step__content">
+                  <strong>Envía tu BOM</strong>
+                  <p>Sube el archivo con tu lista de materiales (BOM) y rellena los datos del formulario.</p>
+                </div>
+              </div>
+              <div class="bom-step">
+                <div class="bom-step__num">2</div>
+                <div class="bom-step__content">
+                  <strong>Analizamos tu proyecto</strong>
+                  <p>Nuestro equipo analiza tu BOM y busca las mejores alternativas de precio sin comprometer la calidad.</p>
+                </div>
+              </div>
+              <div class="bom-step">
+                <div class="bom-step__num">3</div>
+                <div class="bom-step__content">
+                  <strong>Recibe nuestra oferta</strong>
+                  <p>En máximo 2 semanas te enviamos una oferta competitiva y detallada para tu proyecto.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bom-benefits">
+              <h3>Ventajas del servicio</h3>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span>Respuesta garantizada en máximo 2 semanas</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span>Componentes 100% auténticos y trazables</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span>Garantía de 12 meses en todos los componentes</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span>Asesoramiento técnico personalizado</span>
+              </div>
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span>Sin compromiso — la oferta es sin coste</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: form -->
+          <div class="bom-form-wrap reveal reveal-delay-2">
+            <div class="bom-form-card">
+              <h3>Envía tu BOM</h3>
+              <p class="bom-form-sub">Todos los campos marcados con <span style="color: var(--color-primary);">*</span> son obligatorios.</p>
+              <form class="contact-form bom-form" novalidate>
+                <div class="form-group">
+                  <label for="bnom">Nombre <span style="color: var(--color-primary);">*</span></label>
+                  <input type="text" id="bnom" class="form-control" placeholder="Tu nombre completo" required />
+                </div>
+                <div class="form-group">
+                  <label for="bemp">Empresa <span style="color: var(--color-primary);">*</span></label>
+                  <input type="text" id="bemp" class="form-control" placeholder="Nombre de tu empresa" required />
+                </div>
+                <div class="form-group">
+                  <label for="bemail">Email <span style="color: var(--color-primary);">*</span></label>
+                  <input type="email" id="bemail" class="form-control" placeholder="tu@empresa.com" required />
+                </div>
+                <div class="form-group">
+                  <label for="bcantidad">Cantidad esperada anual <span style="color: var(--color-primary);">*</span></label>
+                  <input type="text" id="bcantidad" class="form-control" placeholder="Ej: 5.000 uds/año" required />
+                </div>
+                <div class="form-group">
+                  <label for="binfo">Más información</label>
+                  <textarea id="binfo" class="form-control" placeholder="Describe tu proyecto, componentes específicos, plazos de entrega…" style="min-height: 100px;"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="bfile">Subir archivo BOM</label>
+                  <div class="file-upload-area" onclick="document.getElementById('bfile').click()">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                    <span class="file-upload-label">Arrastra tu BOM aquí o <u>haz clic para seleccionar</u></span>
+                    <span class="file-upload-hint">Excel, CSV, PDF — máx. 10MB</span>
+                    <input type="file" id="bfile" accept=".xlsx,.xls,.csv,.pdf" style="display:none;" />
+                  </div>
+                </div>
+                <button type="submit" class="btn btn--cta btn--lg" style="width: 100%; justify-content: center;" data-label="Enviar solicitud">Enviar solicitud</button>
+                <div class="form-message form-message--success" style="margin-top: var(--space-5);">✓ Solicitud enviada. Nos pondremos en contacto en menos de 2 semanas.</div>
+                <div class="form-message form-message--error" style="display: none; margin-top: var(--space-5);"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // File upload preview
+    document.getElementById('bfile').addEventListener('change', function () {
+      const label = document.querySelector('.file-upload-label');
+      if (this.files.length > 0) {
+        label.textContent = '✓ ' + this.files[0].name;
+      }
+    });
+  </script>
+</body>
+</html>

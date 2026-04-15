@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500,400&f[]=satoshi@700,500,400&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <title>Catálogo de Productos — Amstron</title>
+  <meta name="description" content="Catálogo completo de componentes electrónicos de Amstron: pasivos, activos, semiconductores, conectividad, power, displays, electromecánico y más." />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/productos.css" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="index.html">Inicio</a>
+          <span>›</span>
+          <span>Productos</span>
+        </nav>
+        <p class="page-hero__eyebrow">Catálogo completo</p>
+        <h1 class="page-hero__title">Productos Amstron</h1>
+        <p class="page-hero__sub">Amplia gama de componentes electrónicos de las marcas más reconocidas del sector. Consulta el catálogo completo o descarga nuestra Line Card.</p>
+
+        <!-- Download + Filter bar -->
+        <div class="hero-actions">
+          <a href="assets/docs/linecard-2021.pdf" download class="btn btn--primary btn--lg" id="linecard-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar Line Card (PDF)
+          </a>
+          <a href="assets/docs/condiciones-generales-venta.pdf" download class="btn btn--ghost btn--lg" id="cgv-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Condiciones Generales de Venta
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEARCH + FILTER BAR -->
+    <div class="filter-bar-wrap">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="search-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="product-search" class="search-input" placeholder="Buscar componente…" aria-label="Buscar producto" />
+          </div>
+          <div class="filter-chips" role="group" aria-label="Filtrar por familia">
+            <button class="chip active" data-family="all">Todos</button>
+            <button class="chip" data-family="pasivos">Pasivos</button>
+            <button class="chip" data-family="activos">Activos</button>
+            <button class="chip" data-family="conectividad">Conectividad</button>
+            <button class="chip" data-family="power">Power</button>
+            <button class="chip" data-family="display">Display / LED</button>
+            <button class="chip" data-family="electro">Electromecánico</button>
+            <button class="chip" data-family="otros">Otros</button>
+          </div>
+        </div>
+        <p class="results-count" id="results-count"></p>
+      </div>
+    </div>
+
+    <!-- CATALOGUE GRID -->
+    <section class="section catalogue-section">
+      <div class="container">
+
+        <!-- ═══ PASIVOS ═══ -->
+        <div class="family-block" data-family="pasivos">
+          <div class="family-header">
+            <div class="family-icon family-icon--pasivos">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 12h8M12 8v8"/></svg>
+            </div>
+            <div>
+              <h2 class="family-title">Componentes Pasivos</h2>
+              <p class="family-sub">Elementos que no amplifican señal — condensadores, resistencias, inductores</p>
+            </div>
+            <span class="family-count" data-family-count="pasivos"></span>
+          </div>
+          <div class="products-grid" id="grid-pasivos">
+            <div class="product-card" data-family="pasivos" data-name="Antenas">
+              <div class="product-card__icon">📡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Antenas</h3>
+                <p class="product-card__desc">Antenas para aplicaciones RF, GSM, Wi-Fi, Bluetooth y GPS en distintas frecuencias y formatos.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">RF</span><span class="tag tag--primary">Pasivo</span></div>
+            </div>
+            <div class="product-card" data-family="pasivos" data-name="Condensadores Cerámicos">
+              <div class="product-card__icon">⚡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Condensadores Cerámicos</h3>
+                <p class="product-card__desc">MLCC en formato SMD y through-hole. Amplio rango de capacidad, voltaje y temperatura (X5R, X7R, C0G).</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">MLCC</span><span class="tag tag--primary">SMD</span></div>
+            </div>
+            <div class="product-card" data-family="pasivos" data-name="Condensadores Electrolíticos">
+              <div class="product-card__icon">⚡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Condensadores Electrolíticos</h3>
+                <p class="product-card__desc">Condensadores de aluminio electrolítico para aplicaciones de filtrado y almacenamiento de energía en fuentes de alimentación.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Aluminio</span><span class="tag tag--primary">Filtrado</span></div>
+            </div>
+            <div class="product-card" data-family="pasivos" data-name="Condensadores Tántalo">
+              <div class="product-card__icon">⚡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Condensadores Tántalo</h3>
+                <p class="product-card__desc">Alta capacidad en tamaño reducido. Ideal para equipos portátiles, telecomunicaciones y aplicaciones médicas.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Tántalo</span><span class="tag tag--primary">SMD</span></div>
+            </div>
+            <div class="product-card" data-family="pasivos" data-name="Cristales Osciladores">
+              <div class="product-card__icon">🔔</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Cristales — Osciladores</h3>
+                <p class="product-card__desc">Resonadores de cuarzo, osciladores TCXO y VCXO para aplicaciones de temporización y sincronización de alta precisión.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Cuarzo</span><span class="tag tag--primary">TCXO</span></div>
+            </div>
+            <div class="product-card" data-family="pasivos" data-name="EDLC Supercapacitores">
+              <div class="product-card__icon">🔋</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">EDLC — Supercapacitores</h3>
+                <p class="product-card__desc">Double-layer capacitors de alta energía para backup de memoria, arranque de motores y sistemas de recuperación de energía.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">EDLC</span><span class="tag tag--primary">Energía</span></div>
+            </div>
+            <div class="product-card" data-family="pasivos" data-name="Inductores">
+              <div class="product-card__icon">🌀</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Inductores</h3>
+                <p class="product-card__desc">Bobinas SMD y de montaje axial para filtros EMI, conversores DC-DC y aplicaciones de RF. Distintos valores de inductancia y corriente.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">EMI</span><span class="tag tag--primary">DC-DC</span></div>
+            </div>
+            <div class="product-card" data-family="pasivos" data-name="Resistencias">
+              <div class="product-card__icon">◼</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Resistencias</h3>
+                <p class="product-card__desc">Resistencias de película gruesa y delgada en formatos 0201 a 2512. Tolerancias desde ±0.1%. Redes resistivas también disponibles.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">SMD</span><span class="tag tag--primary">Through-hole</span></div>
+            </div>
+            <div class="product-card" data-family="pasivos" data-name="Transformadores">
+              <div class="product-card__icon">🔄</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Transformadores</h3>
+                <p class="product-card__desc">Transformadores de señal, aislamiento y alimentación para fuentes de alimentación conmutadas y aplicaciones industriales.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Aislamiento</span><span class="tag tag--primary">SMPS</span></div>
+            </div>
+            <div class="product-card" data-family="pasivos" data-name="Varistores">
+              <div class="product-card__icon">⚠</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Varistores (MOV)</h3>
+                <p class="product-card__desc">Metal Oxide Varistors para protección contra sobretensiones transitorias (ESD, rayos, surges) en equipos electrónicos.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Protección</span><span class="tag tag--primary">MOV</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ ACTIVOS / SEMICONDUCTORES ═══ -->
+        <div class="family-block" data-family="activos">
+          <div class="family-header">
+            <div class="family-icon family-icon--activos">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="4"/><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M7 2v3M17 2v3M7 19v3M17 19v3M2 7h3M2 17h3M19 7h3M19 17h3"/></svg>
+            </div>
+            <div>
+              <h2 class="family-title">Activos / Semiconductores</h2>
+              <p class="family-sub">Componentes que controlan, amplifican y conmutan señales eléctricas</p>
+            </div>
+            <span class="family-count" data-family-count="activos"></span>
+          </div>
+          <div class="products-grid" id="grid-activos">
+            <div class="product-card" data-family="activos" data-name="Diodos">
+              <div class="product-card__icon">◆</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Diodos</h3>
+                <p class="product-card__desc">Diodos rectificadores, Schottky, Zener, TVS y de señal. Formatos SMD y through-hole en todos los rangos de tensión y corriente.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Rectificador</span><span class="tag tag--primary">Schottky</span><span class="tag tag--primary">Zener</span></div>
+            </div>
+            <div class="product-card" data-family="activos" data-name="Drivers IC">
+              <div class="product-card__icon">🎛</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Drivers IC</h3>
+                <p class="product-card__desc">Drivers para MOSFET, IGBT, motores paso a paso, LEDs y displays. Alta velocidad de conmutación y protección integrada.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">MOSFET</span><span class="tag tag--primary">Motor</span></div>
+            </div>
+            <div class="product-card" data-family="activos" data-name="Semiconductores de potencia">
+              <div class="product-card__icon">🔬</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Semiconductores</h3>
+                <p class="product-card__desc">MOSFETs, IGBTs, BJTs, tiristores y triacs para control de potencia en aplicaciones industriales, automotive y consumer.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">MOSFET</span><span class="tag tag--primary">IGBT</span><span class="tag tag--primary">BJT</span></div>
+            </div>
+            <div class="product-card" data-family="activos" data-name="Dispositivos OPTO">
+              <div class="product-card__icon">💡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Dispositivos OPTO</h3>
+                <p class="product-card__desc">Optoacopladores, fotodiodos, fototransistores y encoders ópticos. Aislamiento galvánico para interfaces entre diferentes dominios de tensión.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Optoacoplador</span><span class="tag tag--primary">Aislamiento</span></div>
+            </div>
+            <div class="product-card" data-family="activos" data-name="Fusibles">
+              <div class="product-card__icon">🔌</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Fusibles</h3>
+                <p class="product-card__desc">Fusibles de cartucho, SMD y PTC resetables (polyfuse). Protección de corriente para PCB, baterías y equipos de consumo.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Protección</span><span class="tag tag--primary">PTC</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ CONECTIVIDAD ═══ -->
+        <div class="family-block" data-family="conectividad">
+          <div class="family-header">
+            <div class="family-icon family-icon--conectividad">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            </div>
+            <div>
+              <h2 class="family-title">Conectividad y Comunicación</h2>
+              <p class="family-sub">Módulos y componentes para comunicación inalámbrica, IoT y telecomunicaciones</p>
+            </div>
+            <span class="family-count" data-family-count="conectividad"></span>
+          </div>
+          <div class="products-grid" id="grid-conectividad">
+            <div class="product-card" data-family="conectividad" data-name="Bluetooth">
+              <div class="product-card__icon">🔵</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Bluetooth</h3>
+                <p class="product-card__desc">Módulos BLE 4.x / 5.x para wearables, domótica y aplicaciones IoT de bajo consumo. Certificados FCC/CE. Integración sencilla vía UART/SPI.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">BLE 5.x</span><span class="tag tag--primary">IoT</span></div>
+            </div>
+            <div class="product-card" data-family="conectividad" data-name="GSM NB-IoT GPS GNSS">
+              <div class="product-card__icon">📶</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">GSM · NB-IoT · GPS / GNSS</h3>
+                <p class="product-card__desc">Módulos SIMCom de comunicación celular (2G/4G LTE), NB-IoT para redes LPWAN y receptores GNSS multi-constelación con antena integrada.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">SIMCom</span><span class="tag tag--primary">LTE</span><span class="tag tag--primary">NB-IoT</span></div>
+            </div>
+            <div class="product-card" data-family="conectividad" data-name="Wi-Fi">
+              <div class="product-card__icon">📡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Wi-Fi</h3>
+                <p class="product-card__desc">Módulos Wi-Fi 802.11 b/g/n y dual-band ac. Con y sin microcontrolador integrado. Certificados para equipos IoT residenciales e industriales.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">802.11</span><span class="tag tag--primary">Dual-band</span></div>
+            </div>
+            <div class="product-card" data-family="conectividad" data-name="Telecomunicaciones">
+              <div class="product-card__icon">📞</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Telecomunicaciones</h3>
+                <p class="product-card__desc">Componentes de interfaz para líneas telefónicas analógicas, ISDN y equipos de red. Transformadores de telecomunicaciones y circuladores.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">POTS</span><span class="tag tag--primary">ISDN</span></div>
+            </div>
+            <div class="product-card" data-family="conectividad" data-name="Antenas RF">
+              <div class="product-card__icon">📡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Antenas</h3>
+                <p class="product-card__desc">Antenas internas y externas para 2G/3G/4G, Wi-Fi, Bluetooth, GPS y GNSS. Formatos FPC, chip y conector SMA/U.FL.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">SMA</span><span class="tag tag--primary">FPC</span><span class="tag tag--primary">Chip</span></div>
+            </div>
+            <div class="product-card" data-family="conectividad" data-name="Wireless">
+              <div class="product-card__icon">🌐</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Wireless</h3>
+                <p class="product-card__desc">Módulos Wireless-Tag para sub-GHz (433/868/915 MHz), LoRa y Zigbee. Diseñados para redes mesh, domótica y telemetría industrial.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">LoRa</span><span class="tag tag--primary">Zigbee</span><span class="tag tag--primary">Sub-GHz</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ POWER ═══ -->
+        <div class="family-block" data-family="power">
+          <div class="family-header">
+            <div class="family-icon family-icon--power">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <h2 class="family-title">Power</h2>
+              <p class="family-sub">Fuentes de energía, almacenamiento y gestión de potencia</p>
+            </div>
+            <span class="family-count" data-family-count="power"></span>
+          </div>
+          <div class="products-grid" id="grid-power">
+            <div class="product-card" data-family="power" data-name="Baterías">
+              <div class="product-card__icon">🔋</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Baterías</h3>
+                <p class="product-card__desc">Baterías recargables Li-Ion, LiPo y NiMH de la marca Sunnyway. Packs personalizados para equipos portátiles, médicos e industriales.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Li-Ion</span><span class="tag tag--primary">LiPo</span><span class="tag tag--primary">Sunnyway</span></div>
+            </div>
+            <div class="product-card" data-family="power" data-name="Fuentes de Alimentación">
+              <div class="product-card__icon">⚡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Fuentes de Alimentación</h3>
+                <p class="product-card__desc">Fuentes AC/DC y DC/DC en versiones para carril DIN, PCB y rack. Potencias desde 5W hasta varios kW. Certificadas UL/CE.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">AC/DC</span><span class="tag tag--primary">DC/DC</span><span class="tag tag--primary">DIN</span></div>
+            </div>
+            <div class="product-card" data-family="power" data-name="SAI UPS">
+              <div class="product-card__icon">🛡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">SAI (UPS)</h3>
+                <p class="product-card__desc">Sistemas de alimentación ininterrumpida para proteger equipos críticos ante cortes de red. Tecnologías offline, line-interactive y online.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">UPS</span><span class="tag tag--primary">Backup</span></div>
+            </div>
+            <div class="product-card" data-family="power" data-name="Motores">
+              <div class="product-card__icon">⚙</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Motores</h3>
+                <p class="product-card__desc">Motores DC con escobillas, sin escobillas (BLDC) y paso a paso. Para robótica, automatización industrial y equipos de consumo.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">BLDC</span><span class="tag tag--primary">Stepper</span></div>
+            </div>
+            <div class="product-card" data-family="power" data-name="Ventiladores">
+              <div class="product-card__icon">💨</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Ventiladores</h3>
+                <p class="product-card__desc">Ventiladores axiales y centrífugos con control PWM para refrigeración de equipos electrónicos. Formatos 40mm a 120mm, 5V–48V.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">PWM</span><span class="tag tag--primary">Axial</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ DISPLAY / LED ═══ -->
+        <div class="family-block" data-family="display">
+          <div class="family-header">
+            <div class="family-icon family-icon--display">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div>
+              <h2 class="family-title">Display / LED</h2>
+              <p class="family-sub">Visualización e iluminación para todo tipo de aplicaciones</p>
+            </div>
+            <span class="family-count" data-family-count="display"></span>
+          </div>
+          <div class="products-grid" id="grid-display">
+            <div class="product-card" data-family="display" data-name="Displays LCD TFT">
+              <div class="product-card__icon">🖥</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Displays LCD — TFT</h3>
+                <p class="product-card__desc">Módulos LCD character y gráficos, TFT color con resoluciones desde 128×64 hasta 1280×800. Interfaz SPI, I²C, MIPI-DSI y paralelo.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">TFT</span><span class="tag tag--primary">LCD</span><span class="tag tag--primary">SPI</span></div>
+            </div>
+            <div class="product-card" data-family="display" data-name="LED">
+              <div class="product-card__icon">💡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">LED</h3>
+                <p class="product-card__desc">LEDs de indicación, iluminación y backlighting. THT y SMD desde 0402. LEDs RGB, blancos de alta potencia y arrays de LEDs Kodenshi.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Kodenshi</span><span class="tag tag--primary">RGB</span><span class="tag tag--primary">High-Power</span></div>
+            </div>
+            <div class="product-card" data-family="display" data-name="Lente LED optica">
+              <div class="product-card__icon">🔆</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Lente LED</h3>
+                <p class="product-card__desc">Ópticas secundarias de silicona y PMMA para colimación, difusión y control de ángulo de haz en aplicaciones de iluminación LED.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Óptica</span><span class="tag tag--primary">Colimador</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ ELECTROMECÁNICO ═══ -->
+        <div class="family-block" data-family="electro">
+          <div class="family-header">
+            <div class="family-icon family-icon--electro">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <div>
+              <h2 class="family-title">Electromecánico</h2>
+              <p class="family-sub">Conectores, interruptores y componentes de interfaz física</p>
+            </div>
+            <span class="family-count" data-family-count="electro"></span>
+          </div>
+          <div class="products-grid" id="grid-electro">
+            <div class="product-card" data-family="electro" data-name="Bornas de Conexión">
+              <div class="product-card__icon">🔌</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Bornas de Conexión</h3>
+                <p class="product-card__desc">Bornas de tornillo, resorte y push-in para PCB y carril DIN. Pasos desde 2.54mm hasta 10mm. Aprobadas UL y VDE.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">PCB</span><span class="tag tag--primary">DIN</span></div>
+            </div>
+            <div class="product-card" data-family="electro" data-name="Conectores">
+              <div class="product-card__icon">🔗</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Conectores</h3>
+                <p class="product-card__desc">Conectores de placa a placa, FFC/FPC, USB, D-Sub, circular y de potencia. Marcas KLS y KAM con amplia disponibilidad de stock.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">KLS</span><span class="tag tag--primary">USB</span><span class="tag tag--primary">FFC</span></div>
+            </div>
+            <div class="product-card" data-family="electro" data-name="Interruptores">
+              <div class="product-card__icon">🔘</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Interruptores</h3>
+                <p class="product-card__desc">Pulsadores, tactiles, DIP, rotatorios y de lámina reed. SMD y through-hole. Con y sin retención. Certificados IP hasta IP67.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Tácil</span><span class="tag tag--primary">DIP</span><span class="tag tag--primary">IP67</span></div>
+            </div>
+            <div class="product-card" data-family="electro" data-name="Potenciómetros">
+              <div class="product-card__icon">🎚</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Potenciómetros</h3>
+                <p class="product-card__desc">Potenciómetros lineales y rotativos, trimmer de ajuste y potenciómetros digitales (SPI/I²C). Aplicaciones de control analógico y calibración.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Trimmer</span><span class="tag tag--primary">Digital</span></div>
+            </div>
+            <div class="product-card" data-family="electro" data-name="Relés">
+              <div class="product-card__icon">🔁</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Relés</h3>
+                <p class="product-card__desc">Relés de señal, de potencia y de estado sólido (SSR). Formatos PCB, encapsulado y en socket. Bobinas de 5V a 48V DC/AC.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">SSR</span><span class="tag tag--primary">PCB</span><span class="tag tag--primary">Potencia</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ OTROS ═══ -->
+        <div class="family-block" data-family="otros">
+          <div class="family-header">
+            <div class="family-icon family-icon--otros">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+            </div>
+            <div>
+              <h2 class="family-title">Otros Componentes</h2>
+              <p class="family-sub">Sensores, memorias, embedded, imanes y más</p>
+            </div>
+            <span class="family-count" data-family-count="otros"></span>
+          </div>
+          <div class="products-grid" id="grid-otros">
+            <div class="product-card" data-family="otros" data-name="Dispositivos Acústicos buzzer">
+              <div class="product-card__icon">🔊</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Dispositivos Acústicos</h3>
+                <p class="product-card__desc">Buzzers piezoeléctricos y electromagnéticos, altavoces y micrófonos MEMs. Para alertas, interfaz de usuario y captación de sonido.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Buzzer</span><span class="tag tag--primary">MEMs</span></div>
+            </div>
+            <div class="product-card" data-family="otros" data-name="Disipadores de Calor térmica">
+              <div class="product-card__icon">🌡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Disipadores de Calor</h3>
+                <p class="product-card__desc">Disipadores de aluminio en perfil extruido para TO-220, TO-247 y SMD. Pastas térmicas y almohadillas de interfaz térmica también disponibles.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Aluminio</span><span class="tag tag--primary">Térmico</span></div>
+            </div>
+            <div class="product-card" data-family="otros" data-name="Embedded módulo microprocesador">
+              <div class="product-card__icon">💻</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Embedded</h3>
+                <p class="product-card__desc">Módulos de computación embebida (SoM, SBC) y microcontroladores con wireless integrado. Para gateways IoT y aplicaciones edge computing.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">SoM</span><span class="tag tag--primary">IoT</span><span class="tag tag--primary">Edge</span></div>
+            </div>
+            <div class="product-card" data-family="otros" data-name="Imanes">
+              <div class="product-card__icon">🧲</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Imanes</h3>
+                <p class="product-card__desc">Imanes permanentes de neodimio (NdFeB), ferrita y samario-cobalto en distintos formatos: disco, anillo, barra y encapsulados con carcasa.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">NdFeB</span><span class="tag tag--primary">Ferrita</span></div>
+            </div>
+            <div class="product-card" data-family="otros" data-name="Memorias flash eeprom">
+              <div class="product-card__icon">💾</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Memorias</h3>
+                <p class="product-card__desc">Flash NOR/NAND, EEPROM serie (SPI/I²C), SRAM y SDRAM. Amplia gama de capacidades y temperaturas industriales para almacenamiento en sistemas embebidos.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Flash</span><span class="tag tag--primary">EEPROM</span><span class="tag tag--primary">SRAM</span></div>
+            </div>
+            <div class="product-card" data-family="otros" data-name="Protección ESD TVS">
+              <div class="product-card__icon">🛡</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Protección</h3>
+                <p class="product-card__desc">Dispositivos de protección ESD, TVS arrays, supresores de transitorios y filtros EMI/EMC para diseños con certificación IEC 61000.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">ESD</span><span class="tag tag--primary">TVS</span><span class="tag tag--primary">EMI</span></div>
+            </div>
+            <div class="product-card" data-family="otros" data-name="Sensores temperatura presión humedad">
+              <div class="product-card__icon">📊</div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Sensores</h3>
+                <p class="product-card__desc">Sensores de temperatura (NTC, PT100), presión, humedad, corriente (hall effect), proximidad (IR/ultrasonido) y sensor IMU 6-ejes.</p>
+              </div>
+              <div class="product-card__tags"><span class="tag tag--primary">Temperatura</span><span class="tag tag--primary">IMU</span><span class="tag tag--primary">Hall</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NO RESULTS -->
+        <div class="no-results" id="no-results" style="display:none;">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <h3>Sin resultados</h3>
+          <p>No hemos encontrado componentes que coincidan con tu búsqueda. Prueba con otro término o <a href="contacto.html">consúltanos directamente</a>.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PARTNERS LINECARD -->
+    <section class="section" style="background: var(--color-surface-2);">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="tag tag--primary">Marcas</span>
+          <h2 class="section-title" style="font-size: var(--text-xl); margin-top: var(--space-3);">Linecard de partners</h2>
+          <p class="section-sub">Marcas con las que trabajamos directamente. En rojo las distribuciones oficiales.</p>
+        </div>
+        <div class="partners-grid reveal">
+          <div class="partner-badge partner-badge--official">BDE</div>
+          <div class="partner-badge partner-badge--official">Chiaphua Components</div>
+          <div class="partner-badge">Elite / Chinsan</div>
+          <div class="partner-badge partner-badge--official">Golten®</div>
+          <div class="partner-badge partner-badge--official">Good-Ark</div>
+          <div class="partner-badge">Honglizhihui</div>
+          <div class="partner-badge partner-badge--official">KAM</div>
+          <div class="partner-badge partner-badge--official">KLS Electronic</div>
+          <div class="partner-badge partner-badge--official">Kodenshi</div>
+          <div class="partner-badge partner-badge--official">SIMCom</div>
+          <div class="partner-badge">Sinopower</div>
+          <div class="partner-badge partner-badge--official">SiTi</div>
+          <div class="partner-badge partner-badge--official">Sunnyway</div>
+          <div class="partner-badge">Tai-Tech</div>
+          <div class="partner-badge partner-badge--official">UN Semiconductor</div>
+          <div class="partner-badge partner-badge--official">Wireless-Tag</div>
+        </div>
+        <div class="linecard-downloads reveal">
+          <a href="assets/docs/linecard-2021.pdf" download class="btn btn--primary btn--lg" id="linecard-bottom">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar Line Card 2021 (PDF)
+          </a>
+          <a href="assets/docs/condiciones-generales-venta.pdf" download class="btn btn--ghost btn--lg" id="cgv-bottom">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Condiciones Generales de Venta
+          </a>
+        </div>
+        <p class="text-muted text-center" style="font-size: var(--text-xs); margin-top: var(--space-4);">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline; vertical-align: middle;"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          Distribuciones oficiales en rojo · También podemos ofrecerte otros fabricantes bajo consulta
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA CONTACTO -->
+    <section class="section" style="background: var(--color-bg);">
+      <div class="container container--default">
+        <div class="contact-cta-inner reveal">
+          <div>
+            <h2>¿No encuentras lo que buscas?</h2>
+            <p>Nunca rechazamos una consulta. Cuéntanos qué necesitas y te buscamos la mejor solución.</p>
+          </div>
+          <div style="display:flex; gap: var(--space-4); flex-wrap: wrap;">
+            <a href="bom.html" class="btn btn--cta btn--lg">Enviar BOM</a>
+            <a href="contacto.html" class="btn btn--outline btn--lg">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script>
+    // Fallback for PDFs that can't be downloaded locally: open in new tab
+    document.querySelectorAll('[download]').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        // If local file fails, open external
+        fetch(href).then(function(r) {
+          if (!r.ok) throw new Error('not found');
+        }).catch(function() {
+          e.preventDefault();
+          var fallbacks = {
+            'assets/docs/linecard-2021.pdf': 'https://www.amstron.es/wp-content/uploads/2021/01/AMSTRON_LINE_CARD_2021-BT.pdf',
+            'assets/docs/condiciones-generales-venta.pdf': 'https://www.amstron.es/wp-content/uploads/2019/05/CONDICIONES-GENERALES-VENTA.pdf'
+          };
+          var fb = fallbacks[href];
+          if (fb) window.open(fb, '_blank');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
