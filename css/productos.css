@@ -2,6 +2,11 @@
    AMSTRON — Products / Catalogue Page
    ============================================ */
 
+/* ─── PAGE HERO override para productos ─── */
+.page-hero {
+  padding-bottom: var(--space-8);
+}
+
 /* ─── HERO ACTIONS ─── */
 .hero-actions {
   display: flex;
@@ -14,16 +19,12 @@
 /* ─── FILTER BAR ─── */
 .filter-bar-wrap {
   position: sticky;
-  top: 99px; /* topbar(34) + header-nav(65) */
+  top: var(--header-height, 65px); /* tracks actual nav height via JS */
   z-index: 50;
-  background: color-mix(in srgb, var(--color-surface) 98%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
   padding-block: var(--space-3);
   box-shadow: var(--shadow-sm);
-  margin-top: 0;
 }
 
 .filter-bar {
@@ -106,7 +107,10 @@
 }
 
 /* ─── CATALOGUE SECTION ─── */
-.catalogue-section { background: var(--color-bg); }
+.catalogue-section {
+  background: var(--color-bg);
+  padding-top: var(--space-8); /* reduce el hueco tras el filter bar */
+}
 
 /* ─── FAMILY BLOCK ─── */
 .family-block {
@@ -285,7 +289,7 @@
   gap: var(--space-8);
   flex-wrap: wrap;
 }
-[data-theme='dark'] .contact-cta-inner { background: var(--color-primary-active); }
+
 .contact-cta-inner h2 {
   font-size: var(--text-xl);
   font-weight: 800;

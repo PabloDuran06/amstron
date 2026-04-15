@@ -30,12 +30,18 @@ const AMSTRON_LOGO_SVG = `
 function injectHeader() {
   const el = document.getElementById('site-header');
   if (!el) return;
+  // Split topbar (scrolls away) from header (sticky)
+  // Inject topbar before site-header, then fill site-header with just the nav
+  const topbarEl = document.createElement('div');
+  topbarEl.className = 'topbar';
+  topbarEl.innerHTML = `
+    <a href="mailto:info@amstron.es">info@amstron.es</a>
+    <span class="topbar__sep">―</span>
+    <a href="tel:+34912177859">+34 912 177 859</a>
+  `;
+  el.parentElement.insertBefore(topbarEl, el);
+
   el.innerHTML = `
-    <div class="topbar">
-      <a href="mailto:info@amstron.es">info@amstron.es</a>
-      <span class="topbar__sep">―</span>
-      <a href="tel:+34912177859">+34 912 177 859</a>
-    </div>
     <header class="header">
       <nav class="nav container">
         <a href="index.html" class="nav__logo" aria-label="Amstron inicio">

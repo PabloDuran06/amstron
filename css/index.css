@@ -21,7 +21,6 @@
   background-size: 28px 28px;
   pointer-events: none;
 }
-[data-theme='dark'] .hero__bg-pattern { opacity: 0.06; }
 
 .hero__inner {
   display: grid;
@@ -353,7 +352,6 @@
   background: var(--color-charcoal);
   padding-block: clamp(var(--space-12), 6vw, var(--space-20));
 }
-[data-theme='dark'] .cta-band { background: var(--color-primary-active); }
 
 .cta-band__inner {
   display: flex;

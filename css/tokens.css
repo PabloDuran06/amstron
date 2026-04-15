@@ -3,8 +3,7 @@
    Palette derived from coral/salmon logo
    ============================================ */
 
-:root,
-[data-theme='light'] {
+:root {
   /* ─── Surfaces ─── */
   --color-bg:              #FAFAF9;
   --color-surface:         #FFFFFF;
@@ -87,59 +86,4 @@
   --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ─── Dark Mode ─── */
-[data-theme='dark'] {
-  --color-bg:              #161513;
-  --color-surface:         #1D1B18;
-  --color-surface-2:       #232119;
-  --color-surface-offset:  #282520;
-  --color-border:          #3A3731;
-  --color-divider:         #2E2B26;
 
-  --color-text:            #E8E6E3;
-  --color-text-muted:      #8A8784;
-  --color-text-faint:      #5A5855;
-  --color-text-inverse:    #1A1917;
-
-  --color-primary:         #F07065;
-  --color-primary-hover:   #E85A4E;
-  --color-primary-active:  #D94540;
-  --color-primary-light:   #3A1E1C;
-  --color-primary-subtle:  #2E1918;
-
-  --color-cta:             #3DAA6A;
-  --color-cta-hover:       #2E8A52;
-  --color-cta-active:      #23703F;
-  --color-cta-light:       #1A3328;
-
-  --shadow-sm:  0 1px 3px rgba(0,0,0,0.25);
-  --shadow-md:  0 4px 16px rgba(0,0,0,0.35);
-  --shadow-lg:  0 12px 40px rgba(0,0,0,0.45);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --color-bg:              #161513;
-    --color-surface:         #1D1B18;
-    --color-surface-2:       #232119;
-    --color-surface-offset:  #282520;
-    --color-border:          #3A3731;
-    --color-divider:         #2E2B26;
-    --color-text:            #E8E6E3;
-    --color-text-muted:      #8A8784;
-    --color-text-faint:      #5A5855;
-    --color-text-inverse:    #1A1917;
-    --color-primary:         #F07065;
-    --color-primary-hover:   #E85A4E;
-    --color-primary-active:  #D94540;
-    --color-primary-light:   #3A1E1C;
-    --color-primary-subtle:  #2E1918;
-    --color-cta:             #3DAA6A;
-    --color-cta-hover:       #2E8A52;
-    --color-cta-active:      #23703F;
-    --color-cta-light:       #1A3328;
-    --shadow-sm:  0 1px 3px rgba(0,0,0,0.25);
-    --shadow-md:  0 4px 16px rgba(0,0,0,0.35);
-    --shadow-lg:  0 12px 40px rgba(0,0,0,0.45);
-  }
-}

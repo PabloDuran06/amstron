@@ -290,7 +290,7 @@
   gap: var(--space-8);
   flex-wrap: wrap;
 }
-[data-theme='dark'] .contact-cta-inner { background: var(--color-primary-active); }
+
 .contact-cta-inner h2 {
   font-size: var(--text-xl);
   font-family: var(--font-display);
