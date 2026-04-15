@@ -50,7 +50,6 @@ function injectHeader() {
         </ul>
         <div class="nav__actions">
           <a href="productos.html" class="btn btn--primary">Catálogo</a>
-          <button class="theme-toggle" data-theme-toggle aria-label="Cambiar tema"></button>
           <button class="nav__burger" aria-label="Abrir menú" aria-expanded="false">
             <span></span><span></span><span></span>
           </button>

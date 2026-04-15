@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "fecha": "2026-04-08",
+    "categoria": "Mercado",
+    "titulo": "El mercado de semiconductores alcanzará 1,3 billones de dólares en 2026",
+    "resumen": "Gartner proyecta un crecimiento del 64% interanual impulsado por la IA, la memoria de alta densidad y las tecnologías de red. Representa la mayor expansión del sector en dos décadas.",
+    "url": "https://finance.yahoo.com/sectors/technology/article/semiconductor-industry-revenue-to-hit-13-trillion-in-2026-as-memory-crunch-hits-consumers-151202545.html",
+    "fuente": "Yahoo Finance / Gartner"
+  },
+  {
+    "id": 2,
+    "fecha": "2026-03-16",
+    "categoria": "Precios",
+    "titulo": "Subida de precios en 14 fabricantes de chips a partir de abril 2026",
+    "resumen": "Murata, NXP, Texas Instruments y Analog Devices lideran un ciclo de subidas del 15–35% en pasivos, componentes de potencia y analógicos. La demanda de IA y el coste del cobre son los principales motores.",
+    "url": "https://www.briocean.com/april-2026-price-hikes-across-14-chip-suppliers-market-impact-sourcing-insights/",
+    "fuente": "BRIOCEAN"
+  },
+  {
+    "id": 3,
+    "fecha": "2026-02-27",
+    "categoria": "Distribución",
+    "titulo": "El mercado europeo de componentes retoma el crecimiento con +7,7%",
+    "resumen": "La distribución europea de semiconductores alcanzó 2.300 millones de euros en Q4 2025, con Alemania (+14,4%) y Reino Unido (+13,3%) liderando la recuperación. La Península Ibérica aún registra descenso del -5,8%.",
+    "url": "https://www.convertronic.net/noticias/actualidad-2/el-mercado-europeo-de-componentes-electronicos-retoma-el-crecimiento-pese-a-una-recuperacion-desigual.html",
+    "fuente": "Convertronic"
+  },
+  {
+    "id": 4,
+    "fecha": "2026-02-27",
+    "categoria": "Supply Chain",
+    "titulo": "Lead times bajan a 16–24 semanas tras los picos de 2022",
+    "resumen": "El mercado global de componentes electrónicos normaliza sus cadenas de suministro en 2026, con tiempos de entrega que se reducen desde los 50+ semanas de 2022. El crecimiento anual proyectado es del 8–12%.",
+    "url": "https://natlawreview.com/press-releases/2026-global-electronic-components-market-outlook-supply-chain-stabilization",
+    "fuente": "National Law Review"
+  },
+  {
+    "id": 5,
+    "fecha": "2026-01-20",
+    "categoria": "Tendencias",
+    "titulo": "La demanda de IA amenaza con nueva escasez de chips de memoria",
+    "resumen": "Micron advierte que la escasez de memoria persiste más allá de 2026 debido a la IA. SK Hynix y Samsung tienen toda su producción HBM comprometida. El mercado de autos autónomos y robots humanoides aumenta aún más la presión.",
+    "url": "https://cincodias.elpais.com/companias/2026-01-21/la-fuerte-demanda-de-la-ia-amenaza-con-provocar-una-escasez-de-chips-sin-precedentes.html",
+    "fuente": "Cinco Días / El País"
+  }
+]

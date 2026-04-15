@@ -157,6 +157,9 @@
               <a href="productos.html" class="btn btn--ghost">Ver productos</a>
             </div>
           </div>
+          <div class="about-intro__image reveal reveal-delay-1">
+            <img src="assets/img/pcb-hero.jpg" alt="Componentes electrónicos de alta calidad" class="about-img" loading="lazy" />
+          </div>
           <div class="about-intro__checks reveal reveal-delay-2">
             <div class="check-list">
               <div class="check-item">
@@ -245,6 +248,28 @@
       </div>
     </section>
 
+    <!-- ═══ NOTICIAS DEL SECTOR ═══ -->
+    <section class="section noticias-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="noticias-header">
+            <div>
+              <span class="tag tag--primary">Actualidad</span>
+              <h2 class="section-title">Noticias del sector</h2>
+              <p class="section-sub" style="margin-inline:0;">Lo más relevante del mercado de componentes electrónicos.</p>
+            </div>
+            <span class="noticias-badge">Actualizado automáticamente</span>
+          </div>
+        </div>
+        <div class="noticias-grid reveal reveal-delay-1" id="noticias-grid">
+          <!-- Cargadas por JS desde assets/noticias.json -->
+          <div class="noticia-skeleton"></div>
+          <div class="noticia-skeleton"></div>
+          <div class="noticia-skeleton"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ CTA BAND ═══ -->
     <section class="cta-band reveal">
       <div class="container">
@@ -298,5 +323,39 @@
 
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // ─── Carga noticias desde JSON ───
+    (async function() {
+      const grid = document.getElementById('noticias-grid');
+      if (!grid) return;
+      try {
+        const res = await fetch('assets/noticias.json?v=' + Date.now());
+        const noticias = await res.json();
+        const meses = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+        function formatFecha(str) {
+          const d = new Date(str + 'T12:00:00');
+          return d.getDate() + ' ' + meses[d.getMonth()] + ' ' + d.getFullYear();
+        }
+        grid.innerHTML = noticias.slice(0,3).map(function(n, i) {
+          return `<a class="noticia-card" href="${n.url}" target="_blank" rel="noopener noreferrer">
+            <div class="noticia-card__meta">
+              <span class="noticia-chip${i > 0 ? ' noticia-chip--neutral' : ''}">${n.categoria}</span>
+              <span class="noticia-fecha">${formatFecha(n.fecha)}</span>
+            </div>
+            <h3 class="noticia-card__title">${n.titulo}</h3>
+            <p class="noticia-card__resumen">${n.resumen}</p>
+            <div class="noticia-card__footer">
+              <span class="noticia-fuente">${n.fuente}</span>
+              <span class="noticia-link">Leer más
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+              </span>
+            </div>
+          </a>`;
+        }).join('');
+      } catch(e) {
+        grid.innerHTML = '<p style="color:var(--color-text-muted);grid-column:1/-1;">No se pudieron cargar las noticias.</p>';
+      }
+    })();
+  </script>
 </body>
 </html>
