@@ -223,19 +223,19 @@
     }
 
     /* ─────────────────────────────────────────────
-       6. PARTNERS — entran como mosaico
+       6. FABRICANTES — entran como mosaico escalonado
     ───────────────────────────────────────────── */
-    const partnerBadges = document.querySelectorAll('.partner-badge');
-    if (partnerBadges.length) {
-      gsap.fromTo(partnerBadges,
-        { scale: 0.75, opacity: 0 },
+    const fabCards = document.querySelectorAll('.fab-card');
+    if (fabCards.length) {
+      gsap.fromTo(fabCards,
+        { y: 30, opacity: 0, scale: 0.94 },
         {
-          scale: 1, opacity: 1,
-          duration: 0.4, stagger: 0.04,
-          ease: 'back.out(1.7)',
+          y: 0, opacity: 1, scale: 1,
+          duration: 0.45, stagger: 0.04,
+          ease: 'power2.out',
           scrollTrigger: {
-            trigger: '.linecard-section',
-            start: 'top 72%',
+            trigger: '.fabricantes-section',
+            start: 'top 75%',
           }
         }
       );
