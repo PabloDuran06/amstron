@@ -500,7 +500,7 @@
           const d = new Date(str + 'T12:00:00');
           return d.getDate() + ' ' + meses[d.getMonth()] + ' ' + d.getFullYear();
         }
-        grid.innerHTML = noticias.slice(0,3).map(function(n, i) {
+        grid.innerHTML = noticias.slice(0,5).map(function(n, i) {
           return `<a class="noticia-card" href="${n.url}" target="_blank" rel="noopener noreferrer">
             <div class="noticia-card__meta">
               <span class="noticia-chip${i > 0 ? ' noticia-chip--neutral' : ''}">${n.categoria}</span>
