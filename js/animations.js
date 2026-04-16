@@ -369,18 +369,10 @@
     });
 
     /* ─────────────────────────────────────────────
-       12. CHIP CARDS — float continuo en hero
+       12. CHIP CARDS — solo entrada, luego estáticas
     ───────────────────────────────────────────── */
-    document.querySelectorAll('.chip-card').forEach((card, i) => {
-      gsap.to(card, {
-        y: i % 2 === 0 ? -6 : 6,
-        duration: 2 + i * 0.3,
-        ease: 'sine.inOut',
-        yoyo: true,
-        repeat: -1,
-        delay: i * 0.25,
-      });
-    });
+    // Las chip-cards ya entran animadas con el chipGrid (pop escalonado arriba)
+    // No se añade ningún loop — se quedan estáticas tras la entrada
 
   } /* fin initAnimations */
 
