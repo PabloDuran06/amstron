@@ -1,47 +1,47 @@
 [
   {
     "id": 1,
-    "fecha": "2026-04-08",
+    "fecha": "2026-04-13",
     "categoria": "Mercado",
-    "titulo": "El mercado de semiconductores alcanzará 1,3 billones de dólares en 2026",
-    "resumen": "Gartner proyecta un crecimiento del 64% interanual impulsado por la IA, la memoria de alta densidad y las tecnologías de red. Representa la mayor expansión del sector en dos décadas.",
-    "url": "https://finance.yahoo.com/sectors/technology/article/semiconductor-industry-revenue-to-hit-13-trillion-in-2026-as-memory-crunch-hits-consumers-151202545.html",
-    "fuente": "Yahoo Finance / Gartner"
+    "titulo": "La industria de semiconductores superará 1,3 billones de dólares en 2026",
+    "resumen": "Según Gartner, los ingresos globales de chips crecerán un 64% este año, el mayor avance en dos décadas. Los chips para IA representarán el 30% del total. La crisis de memoria ('memflation') presionará la demanda no relacionada con IA hasta 2028.",
+    "url": "https://www.itreseller.es/en-cifras/2026/04/la-industria-de-semiconductores-superara-los-13-billones-de-dolares-en-2026",
+    "fuente": "IT Reseller / Gartner"
   },
   {
     "id": 2,
-    "fecha": "2026-03-16",
+    "fecha": "2026-04-11",
     "categoria": "Precios",
-    "titulo": "Subida de precios en 14 fabricantes de chips a partir de abril 2026",
-    "resumen": "Murata, NXP, Texas Instruments y Analog Devices lideran un ciclo de subidas del 15–35% en pasivos, componentes de potencia y analógicos. La demanda de IA y el coste del cobre son los principales motores.",
-    "url": "https://www.briocean.com/april-2026-price-hikes-across-14-chip-suppliers-market-impact-sourcing-insights/",
-    "fuente": "BRIOCEAN"
+    "titulo": "La DRAM móvil sube un 90% en Q1 2026 y anticipa otro 30% adicional en Q2",
+    "resumen": "El encarecimiento de la memoria DRAM y NAND tensiona márgenes en toda la cadena de componentes. La IA redirige la producción de Samsung y SK Hynix hacia centros de datos, dejando menos capacidad para el mercado industrial y de consumo.",
+    "url": "https://www.laecuaciondigital.com/dispositivos/smartphones/mercado-smartphones-costes-margenes-2026/",
+    "fuente": "La Ecuación Digital / Omdia"
   },
   {
     "id": 3,
-    "fecha": "2026-02-27",
-    "categoria": "Distribución",
-    "titulo": "El mercado europeo de componentes retoma el crecimiento con +7,7%",
-    "resumen": "La distribución europea de semiconductores alcanzó 2.300 millones de euros en Q4 2025, con Alemania (+14,4%) y Reino Unido (+13,3%) liderando la recuperación. La Península Ibérica aún registra descenso del -5,8%.",
-    "url": "https://www.convertronic.net/noticias/actualidad-2/el-mercado-europeo-de-componentes-electronicos-retoma-el-crecimiento-pese-a-una-recuperacion-desigual.html",
-    "fuente": "Convertronic"
+    "fecha": "2026-04-07",
+    "categoria": "Tendencias",
+    "titulo": "El mercado global de electrónica y TIC crecerá un 10,3% en 2026",
+    "resumen": "Impulsado por la IA y los centros de datos, las ventas de semiconductores se expanden un 18,8%, especialmente en chips lógicos y módulos de memoria de última generación. La capacidad de cómputo se convierte en el principal diferenciador tecnológico.",
+    "url": "https://mundoejecutivo.com.mx/actualidad/ia-redefine-el-poder-tecnologico-mercado-de-chips-se-acerca-al-billon-de-dolares-en-2026/",
+    "fuente": "Mundo Ejecutivo / Atradius"
   },
   {
     "id": 4,
-    "fecha": "2026-02-27",
-    "categoria": "Supply Chain",
-    "titulo": "Lead times bajan a 16–24 semanas tras los picos de 2022",
-    "resumen": "El mercado global de componentes electrónicos normaliza sus cadenas de suministro en 2026, con tiempos de entrega que se reducen desde los 50+ semanas de 2022. El crecimiento anual proyectado es del 8–12%.",
-    "url": "https://natlawreview.com/press-releases/2026-global-electronic-components-market-outlook-supply-chain-stabilization",
-    "fuente": "National Law Review"
+    "fecha": "2026-03-02",
+    "categoria": "IoT",
+    "titulo": "IoT: 38.000 millones de dispositivos conectados y una inversión global de 1 billón de dólares",
+    "resumen": "IDC confirma que la inversión mundial en IoT supera el billón de dólares en 2026. El 5G Standalone, el Edge AI y los protocolos unificados impulsan ecosistemas industriales más eficientes, con menor latencia y mayor fiabilidad en planta.",
+    "url": "https://www.vodafone.es/c/empresas/es/informes-y-estudios/informes/poder-iot-2026/",
+    "fuente": "Vodafone Business / IDC"
   },
   {
     "id": 5,
-    "fecha": "2026-01-20",
-    "categoria": "Tendencias",
-    "titulo": "La demanda de IA amenaza con nueva escasez de chips de memoria",
-    "resumen": "Micron advierte que la escasez de memoria persiste más allá de 2026 debido a la IA. SK Hynix y Samsung tienen toda su producción HBM comprometida. El mercado de autos autónomos y robots humanoides aumenta aún más la presión.",
-    "url": "https://cincodias.elpais.com/companias/2026-01-21/la-fuerte-demanda-de-la-ia-amenaza-con-provocar-una-escasez-de-chips-sin-precedentes.html",
-    "fuente": "Cinco Días / El País"
+    "fecha": "2026-04-02",
+    "categoria": "Supply Chain",
+    "titulo": "Precios de componentes bajan tras un Q1 marcado por la escasez",
+    "resumen": "Tras un primer trimestre con fuertes tensiones de suministro, los precios de componentes para equipos industriales y de computación muestran signos de moderación en abril. Los expertos recomiendan anticipar compras estratégicas ante posibles nuevas disrupciones.",
+    "url": "https://www.contrareplica.mx/nota-Precios-de-componentes-para-computadoras-bajan-tras-un-primer-trimestre-de-escasez-20262439",
+    "fuente": "Contrarréplica"
   }
 ]
